@@ -1,34 +1,27 @@
 import tkinter as tk
 from tkinter import messagebox
+from tkinter import ttk
+
+from add_product import Add_product
+from remove_product import Romeve_product
 
 class App:
     def __init__(self, master):
         self.master = master
         self.master.title("Register")
         self.master.geometry("400x300")
-
-        # Frame main
-        self.frame = tk.Frame(master)
-        self.frame.pack(expand=True)
         
-        tk.Label(self.frame, text="cadastro").grid(row=0, column=1, padx=20, pady=20, sticky="nw")
+        #creating tabs
+        self.notebook = ttk.Notebook(master)
+        self.notebook.pack(expand=True,  fill="both")
+       
+        self.frame =Add_product (self.notebook)
+        self.frame2 =Romeve_product(self.notebook)
         
-        tk.Label(self.frame, text="Glass").grid(row=1, column=0, padx=10, pady=10, sticky="nw")
-        self.entry_glass = tk.Entry(self.frame).grid(row=1, column=1)
-        
-        tk.Label(self.frame, text="Color").grid(row=2, column=0, padx=10, pady=10, sticky="nw")
-        self.entry_color = tk.Entry(self.frame).grid(row=2, column=1)
-        
-        tk.Label(self.frame, text="Box").grid(row=3, column=0, padx=10, pady=10, sticky="nw")
-        self.entry_box = tk.Entry(self.frame).grid(row=3, column=1)
-        
-        tk.Label(self.frame, text="Multiplied").grid(row=4, column=0, padx=10, pady=10, sticky="nw")
-        self.entry_multiplied = tk.Entry(self.frame).grid(row=4, column=1)
-        
-        self.button = tk.Button(self.frame, text="Send").grid(row=5, column=1, padx=15, pady=15)
-        
-    
-     
+         
+        self.notebook.add(self.frame, text="cadastro")
+        self.notebook.add(self.frame2, text="ola")
+            
 
 # Inicializa a janela principal
 if __name__ == "__main__":

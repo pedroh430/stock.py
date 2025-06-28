@@ -1,3 +1,3 @@
 # stock.py
 
-#project under refactoring
+# project under refactoring

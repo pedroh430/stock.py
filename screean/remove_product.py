@@ -4,7 +4,7 @@ import tkinter as tk
 class Remove_product (tk.Frame):
     def __init__(self, parent):
         super().__init__(parent)
-        self.pack_propagate(False)
+        self.pack_propagate(True)
         
          
         tk.Label(self, text="cadastro").grid(row=0, column=1, padx=20, pady=20, sticky="nswe")

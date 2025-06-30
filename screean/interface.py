@@ -2,17 +2,19 @@ import tkinter as tk
 from tkinter import messagebox
 from tkinter import ttk
 
-
-
-
+#interface import
 from add_product import Add_product
 from remove_product import Remove_product
-
+  
+  
+  
+  
 class App:
     def __init__(self, master):
         self.master = master
         self.master.title("Register")
-        self.master.geometry("400x300")
+        self.master.geometry("600x300")
+       
         
         #creating tabs
         self.notebook = ttk.Notebook(master)
@@ -22,12 +24,12 @@ class App:
         self.frame2 =Remove_product(self.notebook)
         
          
-        self.notebook.add(self.frame, text="cadastro")
-        self.notebook.add(self.frame2, text="ola")
+        self.notebook.add(self.frame, text="Register")
+        self.notebook.add(self.frame2, text="To remove")
         
 
             
-# Inicializa a janela principal
+#star windows main
 if __name__ == "__main__":
     root = tk.Tk()
     app = App(root)

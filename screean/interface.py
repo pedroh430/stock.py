@@ -13,7 +13,7 @@ class App:
     def __init__(self, master):
         self.master = master
         self.master.title("Register")
-        self.master.geometry("600x300")
+        self.master.geometry("300x250")
        
         
         #creating tabs
@@ -25,7 +25,7 @@ class App:
         
          
         self.notebook.add(self.frame, text="Register")
-        self.notebook.add(self.frame2, text="To remove")
+        self.notebook.add(self.frame2, text="Remove")
         
 
             

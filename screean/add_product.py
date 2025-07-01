@@ -20,6 +20,9 @@ class Add_product(tk.Frame):
         self.color = tk.StringVar()
         self.box = tk.IntVar()
         self.unit = tk.IntVar()
+        
+        
+        
        
        
        # function for send in data base

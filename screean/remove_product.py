@@ -7,7 +7,7 @@ class Remove_product (tk.Frame):
         self.pack_propagate(True)
         
          
-        tk.Label(self, text="cadastro").grid(row=0, column=1, padx=20, pady=20, sticky="nswe")
+        tk.Label(self, text="Remove").grid(row=0, column=1, padx=20, pady=20, sticky="nswe")
         
         tk.Label(self, text="Glass").grid(row=1, column=0, padx=10, pady=10, sticky="nswe")
         self.entry_glass = tk.Entry(self).grid(row=1, column=1)

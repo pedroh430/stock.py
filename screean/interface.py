@@ -13,8 +13,8 @@ class App:
     def __init__(self, master):
         self.master = master
         self.master.title("Register")
-        self.master.geometry("300x250")
-       
+        self.master.geometry("300x250")    
+        
         
         #creating tabs
         self.notebook = ttk.Notebook(master)

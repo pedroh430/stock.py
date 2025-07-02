@@ -35,17 +35,14 @@ class Add_product(tk.Frame):
             total = self.box.get() * self.unit.get()
             valor = self.glass.get(), self.color.get(), self.box.get(),total
             
-            
-            
             cur.execute("SELECT * FROM stock WHERE type = ? AND color = ?", (self.glass.get(), self.color.get(),))
             result = cur.fetchall()
             
             if result:
                 cur.execute("UPDATE stock SET box = ?, units = ? WHERE type = ? AND color  ?", (self.box.get(), total))
-                
+            
             else:
                 
-            
              cur.execute("INSERT INTO stock (type, color, box , units) VALUES(?, ?, ?, ?)", valor )
            
             conn.commit()
